@@ -1,0 +1,62 @@
+Inicia un proyecto de nodejs
+-----------------------------
+npm init --yes
+
+Dependencia a utilizar
+-----------------------
+morgan -> peticiones del usurio
+express -> escribir codigo en el servidor de manera resumida
+passport -> para hacer la autenticacion (google, facebook, twitter, etc)
+passport-local -> para hacer la autenticacion (local)
+ejs-mate -> motor de plantilla (codigo html)
+connect-flash -> enviar mensajes entre multiples paginas
+(styless po defecto lo tiene el servidor)
+mysql
+bcrypt-nodejs -> cifrado de contraseña
+
+npm i express mysql ejs-mate connect-flash morgan passport passport-local bcrypt-nodejs
+
+npm i nodemon -D
+
+
+Base de datos
+--------------
+parametros: {
+        host: 'localhost', //aqui podemos usar la ip
+        user: 'root',
+        password:'',
+        database: 'bbdd_node'
+        // port: 3306
+
+    }
+Conexion base de datos
+-----------------------
+import mysql from "mysql";
+import atributos_base_datos from "./atributos_base_datos";
+
+
+const conexion = mysql.createConnection(atributos_base_datos.parametros);
+
+// Con esto probamos la conexion
+conexion.connect(function(error){
+      if(error){
+          console.log(error);
+        
+      }else{
+          console.log('Conectado a la base de datos');
+        
+      }
+ });
+
+// Evento en caso de error
+conexion.on('error', function(e){
+    console.log(e);
+    
+});
+
+export default conexion;
+
+
+
+Continuar en el minuto 44:54
+https://www.youtube.com/watch?v=uVltgEcjNww&t=2100s

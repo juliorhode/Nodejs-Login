@@ -1,0 +1,23 @@
+{
+  "name": "Nodejs-Login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliorhode/Nodejs-Login.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juliorhode/Nodejs-Login/issues"
+  },
+  "homepage": "https://github.com/juliorhode/Nodejs-Login#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
