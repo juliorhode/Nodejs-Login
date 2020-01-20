@@ -14,49 +14,11 @@ connect-flash -> enviar mensajes entre multiples paginas
 mysql
 bcrypt-nodejs -> cifrado de contraseña
 
-npm i express mysql ejs-mate connect-flash morgan passport passport-local bcrypt-nodejs
+npm i express express-session mysql express-mysql-session ejs-mate connect-flash morgan passport passport-local bcrypt-nodejs timeago.js express-validator
 
 npm i nodemon -D
 
 
-Base de datos
---------------
-parametros: {
-        host: 'localhost', //aqui podemos usar la ip
-        user: 'root',
-        password:'',
-        database: 'bbdd_node'
-        // port: 3306
+https://github.com/fazttech
 
-    }
-Conexion base de datos
------------------------
-import mysql from "mysql";
-import atributos_base_datos from "./atributos_base_datos";
-
-
-const conexion = mysql.createConnection(atributos_base_datos.parametros);
-
-// Con esto probamos la conexion
-conexion.connect(function(error){
-      if(error){
-          console.log(error);
-        
-      }else{
-          console.log('Conectado a la base de datos');
-        
-      }
- });
-
-// Evento en caso de error
-conexion.on('error', function(e){
-    console.log(e);
-    
-});
-
-export default conexion;
-
-
-
-Continuar en el minuto 44:54
 https://www.youtube.com/watch?v=uVltgEcjNww&t=2100s
